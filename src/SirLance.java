@@ -25,8 +25,8 @@ public class SirLance {
             int enemyHealth = 100;
             int enemyDamage = 15;
 
-            System.out.println("there health" + enemyHealth);
-            System.out.println("there damage" + enemyDamage);
+            System.out.println("there health " + enemyHealth);
+            System.out.println("there damage " + enemyDamage);
 
             System.out.println("====================");
 //
@@ -36,13 +36,26 @@ public class SirLance {
             int yourdamage = 20;
 
             System.out.println("Your health " + yourHelth);
-            System.out.println( " your damage" + yourdamage);
+            System.out.println( " your damage " + yourdamage);
 
-
+        if(enemyHealth > 0) {
             int remaningHealth = enemyHealth - yourdamage;
 
 
+            System.out.println("Quick pick a number!\n1. Attack\n2. run?");
 
+            int userTurn = Integer.parseInt(input.nextLine());
+
+            do {
+                if (userTurn == 1) {
+
+                    System.out.println(remaningHealth);
+
+                } else if (userTurn == 2) {
+                    System.out.println("You can't run from me!!");
+                }
+            } while (enemyHealth < 0);
+        }
 //
 //            do {
 //
