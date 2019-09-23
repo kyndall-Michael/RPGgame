@@ -17,7 +17,7 @@ public class SirLance {
 
         if (input.nextLine().equalsIgnoreCase("y")){
             System.out.println("Battle start");
-//
+
             System.out.println("===================");
 
             System.out.println("Your challeneger is Codeup");
@@ -29,34 +29,38 @@ public class SirLance {
             System.out.println("there damage " + enemyDamage);
 
             System.out.println("====================");
-//
+
             System.out.println(getName);
-//
+
             int yourHelth = 100;
             int yourdamage = 20;
 
             System.out.println("Your health " + yourHelth);
             System.out.println( " your damage " + yourdamage);
 
-        if(enemyHealth > 0) {
-            int remaningHealth = enemyHealth - yourdamage;
-
-
-            System.out.println("Quick pick a number!\n1. Attack\n2. run?");
-
-            int userTurn = Integer.parseInt(input.nextLine());
-
-            do {
-                if (userTurn == 1) {
-
-                    System.out.println(remaningHealth);
-
-                } else if (userTurn == 2) {
-                    System.out.println("You can't run from me!!");
-                }
-            } while (enemyHealth < 0);
+            attack(yourdamage,enemyHealth);
         }
-//
+
+    }
+
+    public static void attack(int yourdamage, int enemyhealth){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Quick pick a number!\n1. Attack\n2. run?");
+
+        int userTurn = Integer.parseInt(input.nextLine());
+        if (enemyhealth == 0){
+            System.out.println("victorious");
+        }else if(userTurn == 1){
+            System.out.println(enemyhealth - yourdamage);
+        }
+
+
+    }
+
+
+}
+
 //            do {
 //
 //                heroTurns(input);
@@ -70,11 +74,6 @@ public class SirLance {
 //        }else {
 //            System.out.println("You are weaker than I thought you were ");
 //        }
-
-
-
-
-    }
 
 //        Scanner input = new Scanner(System.in);
 //
@@ -148,6 +147,3 @@ public class SirLance {
 //    public static int hit(int damange, int health){
 //       return health -= damange;
 //    }
-
-}}
-
