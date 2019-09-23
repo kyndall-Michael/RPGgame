@@ -37,26 +37,36 @@ public class SirLance {
 
             System.out.println("Your health " + yourHelth);
             System.out.println( " your damage " + yourdamage);
+            int remainingHealth;
 
-            attack(yourdamage,enemyHealth);
+            do {
+                System.out.println("Quick pick a number!\n1. Attack\n2. run?");
+                int userTurn = Integer.parseInt(input.nextLine());
+                if(userTurn == 1){
+                enemyHealth-=yourdamage;
+            System.out.println(enemyHealth);
+                }
+            }while (enemyHealth >= 0);
+
+
         }
 
     }
 
-    public static void attack(int yourdamage, int enemyhealth){
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("Quick pick a number!\n1. Attack\n2. run?");
-
-        int userTurn = Integer.parseInt(input.nextLine());
-        if (enemyhealth == 0){
-            System.out.println("victorious");
-        }else if(userTurn == 1){
-            System.out.println(enemyhealth - yourdamage);
-        }
-
-
-    }
+//    public static void attack(int yourdamage, int enemyhealth){
+//        Scanner input = new Scanner(System.in);
+//
+//        System.out.println("Quick pick a number!\n1. Attack\n2. run?");
+//
+//        int userTurn = Integer.parseInt(input.nextLine());
+//        if (enemyhealth == 0){
+//            System.out.println("victorious");
+//        }else if(userTurn == 1){
+//            System.out.println(enemyhealth - yourdamage);
+//        }
+//
+//
+//    }
 
 
 }
