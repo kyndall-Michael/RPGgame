@@ -7,6 +7,7 @@ public class SirLance {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Welcome to WestRoast!!");
+
         System.out.println("What is your name champion??");
 
         String getName = input.nextLine().toUpperCase();
@@ -16,6 +17,7 @@ public class SirLance {
         System.out.println("Are you willing to except the challenge? [Y | N]");
 
         if (input.nextLine().equalsIgnoreCase("y")){
+
             System.out.println("Battle start");
 
             System.out.println("===================");
@@ -23,137 +25,63 @@ public class SirLance {
             System.out.println("Your challeneger is Codeup");
 
             int enemyHealth = 100;
+
             int enemyDamage = 15;
 
             System.out.println("there health " + enemyHealth);
+
             System.out.println("there damage " + enemyDamage);
 
             System.out.println("====================");
 
             System.out.println(getName);
 
-            int yourHelth = 100;
-            int yourdamage = 20;
+            int yourHealth = 100;
 
-            System.out.println("Your health " + yourHelth);
-            System.out.println( " your damage " + yourdamage);
-            int remainingHealth;
+            int yourDamage = 20;
+
+            int potions = 3;
+
+            System.out.println("Your health " + yourHealth);
+
+            System.out.println( "your damage " + yourDamage);
+
+            System.out.println("You have 3 potions " + potions);
 
             do {
-                System.out.println("Quick pick a number!\n1. Attack\n2. run?");
+
+                System.out.println("Quick pick a number!\n1. Attack\n2. potions\n3. run?");
+
                 int userTurn = Integer.parseInt(input.nextLine());
+
                 if(userTurn == 1){
-                enemyHealth-=yourdamage;
-            System.out.println(enemyHealth);
+
+                enemyHealth-=yourDamage;
+
+                System.out.println(enemyHealth);
+
+                }else if (userTurn == 2){
+
+                    if (potions == 0){
+
+                        System.out.println("You are out of potions!");
+
+                    }else{
+
+                    potions -= 1;
+
+                    System.out.println("You add +30 health");
+
+                    }
+                }else if (userTurn == 3){
+
+                    System.out.println("You cant run from me!!!");
+
                 }
-            }while (enemyHealth >= 0);
 
+            }while (enemyHealth > 0);
 
+            System.out.println("Victorious!!!");
         }
-
     }
-
-//    public static void attack(int yourdamage, int enemyhealth){
-//        Scanner input = new Scanner(System.in);
-//
-//        System.out.println("Quick pick a number!\n1. Attack\n2. run?");
-//
-//        int userTurn = Integer.parseInt(input.nextLine());
-//        if (enemyhealth == 0){
-//            System.out.println("victorious");
-//        }else if(userTurn == 1){
-//            System.out.println(enemyhealth - yourdamage);
-//        }
-//
-//
-//    }
-
-
 }
-
-//            do {
-//
-//                heroTurns(input);
-//
-//            if (health() == 0){
-//                System.out.println("Victorious!!!");
-//            }
-//
-//            }while (isAlive());
-//
-//        }else {
-//            System.out.println("You are weaker than I thought you were ");
-//        }
-
-//        Scanner input = new Scanner(System.in);
-//
-//        System.out.println("Welcome to WestRoast");
-//        System.out.println("What is your name Champion?");
-//
-//        String getName = input.nextLine().toUpperCase();
-//
-//        System.out.println("Welcome peasant " + getName);
-//
-//
-//
-//
-
-//    public static boolean enemy(){
-//
-//        String enemyName = "Codeup";
-//
-//        int enemyHealth = 100;
-//
-//        int enemyDamage = 15;
-//
-//        System.out.println("Your challenger is " + enemyName + "\n");
-//
-//        System.out.println("enemyHealth " + enemyHealth);
-//
-//        System.out.println("enemyDamage " + enemyDamage);
-//
-//        return true;
-//    }
-//
-//    public static void heroStats(){
-//
-//        System.out.println("Your health is " + health());
-//
-//        System.out.println("Your damage is " + damage());
-//    }
-//
-//    public static void heroTurns(Scanner input){
-//        System.out.println("Quick pick a number!\n1. Attack\n2. run?");
-//
-//        int userTurn  = Integer.parseInt(input.nextLine());
-//
-//
-//        if (userTurn == 1){
-//
-//            System.out.println(hit(20, 100));
-//
-//        }else if (userTurn == 2){
-//            System.out.println("You can't run from me!!");
-//        }
-//
-//    }
-//
-//    public static int damage(){
-//        int Damage = 100;
-//        return Damage;
-//    }
-//
-//    public static int health(){
-//
-//       int Health = 100;
-//
-//       return Health;
-//    }
-//
-//    public static boolean isAlive(){
-//        return health() > 0;
-//    }
-//
-//    public static int hit(int damange, int health){
-//       return health -= damange;
-//    }
