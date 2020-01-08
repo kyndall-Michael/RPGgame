@@ -67,6 +67,10 @@ public class SirLance {
                 //enemy health - your damage
                 enemyHealth-=yourDamage;
 
+                yourHealth-=enemyDamage;
+
+                System.out.println(yourHealth);
+
                 //new eneamy health
                 System.out.println(enemyHealth);
 
@@ -85,7 +89,11 @@ public class SirLance {
 
                     yourHealth+=30;
 
-                    System.out.println("You add +30 health");
+                    yourDamage+=10;
+
+                    System.out.println("You added +30 health");
+
+                    System.out.println("You added +10 damage");
 
                     }
 
