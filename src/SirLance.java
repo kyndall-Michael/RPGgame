@@ -69,10 +69,10 @@ public class SirLance {
 
                 yourHealth-=enemyDamage;
 
-                System.out.println(yourHealth);
+                System.out.println("your health now is " + yourHealth);
 
                 //new eneamy health
-                System.out.println(enemyHealth);
+                System.out.println("there health now is " + enemyHealth);
 
                 //use potions if input equals 2
                 }else if (userTurn == 2){
