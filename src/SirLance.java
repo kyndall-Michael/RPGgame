@@ -91,9 +91,13 @@ public class SirLance {
 
                     yourDamage+=10;
 
+                    yourHealth-=enemyDamage;
+
                     System.out.println("You added +30 health");
 
                     System.out.println("You added +10 damage");
+
+                    System.out.println("you lost health because you cant defend yourself");
 
                     }
 
